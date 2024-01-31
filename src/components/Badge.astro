@@ -1,4 +1,16 @@
-<span class="bg-blue-100 text-blue-800 text-xs font-medium me-2 px-2.5 py-0.5 rounded dark:bg-gray-700 dark:text-blue-400 border border-blue-400">
-    <slot />
+
+<span class="relative flex overflow-hidden rounded-full p-[1px]">
+    <span class="absolute inset-[-1000%] animate-[spin_5s_linear_infinite] bg-[conic-gradient(#b6b6f2_0%,#333147_50%,#b6b6f2_100%)]">
+    </span>
+    <div class="inline-flex h-full w-full cursor-pointer items-center justify-center rounded-full bg-black/50 px-3 py-1 text-sm font-medium text-white backdrop-blur-3xl whitespace-nowrap"> 
+       
+        <a
+        {... Astro.props}
+        target="_blank"
+        rel="noopener noreferrer"
+        >
+            <slot/>
+        </a>
+    </div>
 
 </span>
