@@ -9,6 +9,7 @@ import Badge from '../components/Badge.astro';
 import SocialBadge from '../components/SocialBadge.astro';
 import ExpStudies from '../components/ExpStudies.astro';
 import Projects from '../components/Projects.astro';
+import ExpStudiesIcon from '../components/icons/ExpStudiesIcon.astro';
 ---
 
 <Layout title="Welcome to Astro.">
@@ -47,13 +48,16 @@ import Projects from '../components/Projects.astro';
 				</SocialBadge>
 			</nav>	
 		</section>
-		<section class="w-full mx-auto lg:w-[740px] py-44"> 
-			<h2>Experiencia y estudios</h2>
+		<section id="experienciaEstudios" class="w-full mx-auto lg:w-[740px] py-15"> 
+			<h2 class="text-3xl font-semibold mb-10 flex gap-x-2 items-center">
+				<ExpStudiesIcon class="size-6"/>
+				Experiencia y estudios</h2>
 			<ExpStudies/>
 		</section>
 
-		<section class="w-full mx-auto lg:w-[740px] py-44"> 
-			<h2>Proyectos</h2>
+		<section id="proyectos" class="w-full mx-auto lg:w-[740px] py-20"> 
+			<h2 class="text-3xl font-semibold mb-10 flex gap-x-2 items-center">
+				Proyectos</h2>
 			<Projects />
 		</section>
 	</main>

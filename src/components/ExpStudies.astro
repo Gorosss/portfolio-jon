@@ -26,15 +26,15 @@ const EXPERIENCESTUDIES = [
 
 
 
-<ol class="relative border-s border-gray-200 dark:border-gray-700">   
+<ul class="relative border-s border-gray-200 dark:border-gray-500 ml-2.5">   
     {
         EXPERIENCESTUDIES.map(({ title, date, description, link }) => 
-        <li class="mb-10 ms-4">
+        <li class="mb-10 ms-4 ">
             <ExpStudiesItem title={title} date={date} description={description} link={link} />
         
             </li>
         )
     }    
     
-</ol>
+</ul>
 
