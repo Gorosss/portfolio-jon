@@ -10,10 +10,11 @@ import SocialBadge from '../components/SocialBadge.astro';
 import ExpStudies from '../components/ExpStudies.astro';
 import Projects from '../components/Projects.astro';
 import ExpStudiesIcon from '../components/icons/ExpStudiesIcon.astro';
+import ProjectIcon from '../components/icons/ProjectIcon.astro';
 ---
 
 <Layout title="Welcome to Astro.">
-	<main >
+	<main class="px-4">
 		<section class="w-full mx-auto lg:w-[740px] py-44">
 			<img 
 			class="rounded-full size-14 mb-4" 
@@ -57,6 +58,7 @@ import ExpStudiesIcon from '../components/icons/ExpStudiesIcon.astro';
 
 		<section id="proyectos" class="w-full mx-auto lg:w-[740px] py-20"> 
 			<h2 class="text-3xl font-semibold mb-10 flex gap-x-2 items-center">
+				<ProjectIcon class="size-6"/>
 				Proyectos</h2>
 			<Projects />
 		</section>
