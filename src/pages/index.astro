@@ -7,6 +7,8 @@ import GmailIcon from '../components/icons/Gmail.astro';
 
 import Badge from '../components/Badge.astro';
 import SocialBadge from '../components/SocialBadge.astro';
+import ExpStudies from '../components/ExpStudies.astro';
+import Projects from '../components/Projects.astro';
 ---
 
 <Layout title="Welcome to Astro.">
@@ -44,6 +46,15 @@ import SocialBadge from '../components/SocialBadge.astro';
 					jongorostegui@gmail.com				
 				</SocialBadge>
 			</nav>	
+		</section>
+		<section class="w-full mx-auto lg:w-[740px] py-44"> 
+			<h2>Experiencia y estudios</h2>
+			<ExpStudies/>
+		</section>
+
+		<section class="w-full mx-auto lg:w-[740px] py-44"> 
+			<h2>Proyectos</h2>
+			<Projects />
 		</section>
 	</main>
 </Layout>
