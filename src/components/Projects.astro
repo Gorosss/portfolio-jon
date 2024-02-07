@@ -1,4 +1,22 @@
+
 ---
+
+import BootstrapIcon from './icons/BootstrapIcon.astro'
+import ReactIcon from './icons/ReactIcon.astro'
+
+const TAGS = {
+        REACT: {
+            name: 'React',
+            color: 'bg-blue-500',
+            icon: ReactIcon
+        },
+        BOOTSTRAP: {
+            name: 'Bootstrap',
+            color: 'bg-purple-500',
+            icon: BootstrapIcon
+        }
+    }
+
 const PROJECTS = [
     {
         title: 'SummonerData.gg',
@@ -6,7 +24,7 @@ const PROJECTS = [
         image: '/projects/summonerDataImage.webp',
         link: 'https://summoner-data.vercel.app/',
         github: 'https://github.com/Gorosss/summonerData',
-        tags: ['React', 'Bootstrap']
+        tags: [TAGS.REACT, TAGS.BOOTSTRAP]
     },
     {
         title: 'Project 2',
@@ -14,31 +32,45 @@ const PROJECTS = [
         image: 'https://via.placeholder.com/150',
         link: 'https://www.google.com',
         github: 'https://www.github.com',
-        tags: ['React', 'Bootstrap']
+        tags: [TAGS.REACT, TAGS.BOOTSTRAP]
     }
 ]
 ---
 
 
 {
-    PROJECTS.map(({title, description , image , link , tags}) => {
+    PROJECTS.map(({title, description , image , link , tags, github}) => {
         return (
             <article>
                 <h2 class="text-2xl bold pb-2">{title}</h2>
-                <p class="mb-4 text-base font-normal text-gray-400 dark:text-gray-300 text-pretty">{description}</p>
 
                 {
                     tags && (
-                        <ul>
+                        <ul class="flex gap-3 my-3">
                             {tags.map(
-                                tag => <li>{tag}</li>)
+                                tag => <li>
+                                    <span class=`flex p-1 px-2 gap-x-2 rounded-full text-xs ${tag.color}`>
+                                        <tag.icon class="w-4 h-4" />
+                                    {tag.name}
+                                    </span>
+                                    
+                                    </li>)
                             
                         }
                         </ul>
                     )
                 }
+                <p class="mb-4 text-base font-normal text-gray-400 dark:text-gray-300 text-pretty">{description}</p>
+               
+                <div class="flex gap-3 my-3">
+                    <a href={link} rel="noopener noreferrer" class="inline-flex items-center justify-center gap-2 px-3 py-2 space-x-2 text-base text-white transition bg-gray-800 border border-gray-600 focus-visible:ring-yellow-500/80 text-md hover:bg-gray-800 hover:border-gray-900 group max-w-fit rounded-xl hover:text-white focus:outline-none focus-visible:outline-none focus-visible:ring focus-visible:ring-white focus-visible:ring-offset-2 active:bg-black">
+                    Webpage</a>
+                <a href={github} rel="noopener noreferrer" class="inline-flex items-center justify-center gap-2 px-3 py-2 space-x-2 text-base text-white transition bg-gray-800 border border-gray-600 focus-visible:ring-yellow-500/80 text-md hover:bg-gray-800 hover:border-gray-900 group max-w-fit rounded-xl hover:text-white focus:outline-none focus-visible:outline-none focus-visible:ring focus-visible:ring-white focus-visible:ring-offset-2 active:bg-black">
+                    Github</a>
+                </div>
+                
+
                 <img class="rounded-lg shadow-xl shadow-white/5" src={image} alt="project image" />
-                <a href={link} rel="noopener noreferrer">SummonerData.gg</a>
             </article>
         )
     })
