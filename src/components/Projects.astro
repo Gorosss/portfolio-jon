@@ -1,12 +1,12 @@
 ---
 const PROJECTS = [
     {
-        title: 'Project 1',
-        description: 'This is a description of project 1',
-        image: 'https://via.placeholder.com/150',
-        link: 'https://www.google.com',
-        github: 'https://www.github.com',
-        tags: ['tag1', 'tag2']
+        title: 'SummonerData.gg',
+        description: 'Aplicación diseñada para proporcionar a los jugadores de League of Legends información valiosa y en tiempo real sobre los jugadores, permitiéndoles acceder fácilmente a datos clave relacionados con su historial de partidas, maestrías con los campeones y estadísticas en vivo.',
+        image: '/projects/summonerDataImage.webp',
+        link: 'https://summoner-data.vercel.app/',
+        github: 'https://github.com/Gorosss/summonerData',
+        tags: ['React', 'Bootstrap']
     },
     {
         title: 'Project 2',
@@ -14,7 +14,7 @@ const PROJECTS = [
         image: 'https://via.placeholder.com/150',
         link: 'https://www.google.com',
         github: 'https://www.github.com',
-        tags: ['tag1', 'tag2']
+        tags: ['React', 'Bootstrap']
     }
 ]
 ---
@@ -24,8 +24,8 @@ const PROJECTS = [
     PROJECTS.map(({title, description , image , link , tags}) => {
         return (
             <article>
-                <h2>{title}</h2>
-                <p>{description}</p>
+                <h2 class="text-2xl bold pb-2">{title}</h2>
+                <p class="mb-4 text-base font-normal text-gray-400 dark:text-gray-300 text-pretty">{description}</p>
 
                 {
                     tags && (
@@ -37,8 +37,8 @@ const PROJECTS = [
                         </ul>
                     )
                 }
-                <img src={image} alt="project image" />
-                <a href={link}>Link</a>
+                <img class="rounded-lg shadow-xl shadow-white/5" src={image} alt="project image" />
+                <a href={link} rel="noopener noreferrer">SummonerData.gg</a>
             </article>
         )
     })
