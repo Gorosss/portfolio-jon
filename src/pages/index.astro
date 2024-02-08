@@ -1,66 +1,111 @@
 ---
-import Layout from '../layouts/Layout.astro';
+import Layout from "../layouts/Layout.astro";
 
-import LinkedInIcon from '../components/icons/LinkedIn.astro';
-import GithubIcon from '../components/icons/Github.astro';
-import GmailIcon from '../components/icons/Gmail.astro';
+import LinkedInIcon from "../components/icons/LinkedIn.astro";
+import GithubIcon from "../components/icons/Github.astro";
+import GmailIcon from "../components/icons/Gmail.astro";
 
-import Badge from '../components/Badge.astro';
-import SocialBadge from '../components/SocialBadge.astro';
-import ExpStudies from '../components/ExpStudies.astro';
-import Projects from '../components/Projects.astro';
-import ExpStudiesIcon from '../components/icons/ExpStudiesIcon.astro';
-import ProjectIcon from '../components/icons/ProjectIcon.astro';
+import Badge from "../components/Badge.astro";
+import SocialBadge from "../components/SocialBadge.astro";
+import ExpStudies from "../components/ExpStudies.astro";
+import Projects from "../components/Projects.astro";
+import ExpStudiesIcon from "../components/icons/ExpStudiesIcon.astro";
+import ProjectIcon from "../components/icons/ProjectIcon.astro";
+import UserIcon from "../components/icons/UserIcon.astro";
 ---
 
-<Layout title="Welcome to Astro.">
+<Layout title="Portfolio Jon Gorostegui - Ingeniero en Informática de Software"
+		description="Contrata a Jon Gorostegui, Ingeniero Informático de Software y desarrollador web.">
 	<main class="px-4">
-		<section class="w-full mx-auto lg:w-[740px] py-44">
-			<img 
-			class="rounded-full size-14 mb-4" 
-			src="https://media.licdn.com/dms/image/D4D03AQELuOTzPR8gkQ/profile-displayphoto-shrink_200_200/0/1694444689623?e=1712188800&v=beta&t=SBJ-AzK2T8PNOdHiZmnIXDH4I34qcHSPd2VHKtfXyqg" 
-			alt="Foto Jon"
+		<section id="inicio" class="w-full mx-auto lg:w-[740px] py-44">
+			<img
+				class="rounded-full size-14 mb-4"
+				src="https://media.licdn.com/dms/image/D4D03AQELuOTzPR8gkQ/profile-displayphoto-shrink_200_200/0/1694444689623?e=1712188800&v=beta&t=SBJ-AzK2T8PNOdHiZmnIXDH4I34qcHSPd2VHKtfXyqg"
+				alt="Foto Jon"
 			/>
-			<h1 class="text-gray-900 dark:text-white text-2xl md:text-3xl lg:text-4xl font-bold flex flex-row gap-x-4 pb-6 lg:pb-8">
-				Hola, soy Jon Gorostegui 
-				<Badge href="https://www.linkedin.com/in/jon-gorostegui-martinez-a0571a247/">
-					Abierto a ofertas laborales 
-				</Badge> 
+			<h1
+				class="text-gray-900 dark:text-white text-2xl md:text-3xl lg:text-4xl font-bold flex flex-row gap-x-4 pb-6 lg:pb-8"
+			>
+				Hola, soy Jon Gorostegui
+				<Badge
+					href="https://www.linkedin.com/in/jon-gorostegui-martinez-a0571a247/"
+				>
+					Abierto a ofertas laborales
+				</Badge>
 			</h1>
 
-			<h3 class="text-xl lg:text-2xl text-balance max-w-[700px] text-black dark:text-white pb-6 lg:pb-8">
-				Soy Licenciado en Ingeniería del Software, me gusta el Desarrollo Web y la Programación en general. Del Pais Vasco, España.
+			<h3
+				class="text-xl lg:text-2xl text-balance max-w-[700px] text-black dark:text-white pb-6 lg:pb-8"
+			>
+				Soy Licenciado en Ingeniería del Software, me gusta el
+				Desarrollo Web y la Programación en general. Del Pais Vasco,
+				España.
 			</h3>
 
-			<nav class="flex gap-x-4">			
-				<SocialBadge href="https://www.linkedin.com/in/jon-gorostegui-martinez-a0571a247/">
-					<LinkedInIcon class="w-6 h-6"/>
+			<nav class="flex gap-x-4">
+				<SocialBadge
+					href="https://www.linkedin.com/in/jon-gorostegui-martinez-a0571a247/"
+				>
+					<LinkedInIcon class="w-6 h-6" />
 					LinkedIn
-				
 				</SocialBadge>
 				<SocialBadge href="https://github.com/Gorosss">
-					<GithubIcon class="w-6 h-6"/>
+					<GithubIcon class="w-6 h-6" />
 					Github
-				
 				</SocialBadge>
 				<SocialBadge href="mailto:jongorostegui@gmail.com">
-					<GmailIcon class="w-6 h-6"/>
-					jongorostegui@gmail.com				
+					<GmailIcon class="w-6 h-6" />
+					jongorostegui@gmail.com
 				</SocialBadge>
-			</nav>	
+			</nav>
 		</section>
-		<section id="experienciaEstudios" class="w-full mx-auto lg:w-[740px] py-15"> 
+		<section
+			id="experienciaEstudios"
+			class="w-full mx-auto lg:w-[740px] py-15"
+		>
 			<h2 class="text-3xl font-semibold mb-10 flex gap-x-2 items-center">
-				<ExpStudiesIcon class="size-6"/>
-				Experiencia y estudios</h2>
-			<ExpStudies/>
+				<ExpStudiesIcon class="size-6" />
+				Experiencia y estudios
+			</h2>
+			<ExpStudies />
 		</section>
 
-		<section id="proyectos" class="w-full mx-auto lg:w-[740px] py-20"> 
+		<section id="proyectos" class="w-full mx-auto lg:w-[740px] py-20">
 			<h2 class="text-3xl font-semibold mb-10 flex gap-x-2 items-center">
-				<ProjectIcon class="size-6"/>
-				Proyectos</h2>
+				<ProjectIcon class="size-6" />
+				Proyectos
+			</h2>
 			<Projects />
+		</section>
+
+		<section id="sobre_mi" class="w-full mx-auto lg:w-[740px] py-20">
+			<h2 class="text-3xl font-semibold mb-10 flex gap-x-2 items-center">
+				<UserIcon class="size-6" />
+				Sobre mi
+			</h2>
+			<div
+				class="[&>p]:mb-4 text-pretty"
+			>
+			<p>
+				Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do
+				eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
+				enim ad minim veniam, quis nostrud exercitation ullamco laboris
+				nisi ut aliquip ex ea commodo consequat.
+			</p>
+			<p>
+				Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do
+				eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
+				enim ad minim veniam, quis nostrud exercitation ullamco laboris
+				nisi ut aliquip ex ea commodo consequat.
+			</p>
+			<p>
+				Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do
+				eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
+				enim ad minim veniam, quis nostrud exercitation ullamco laboris
+				nisi ut aliquip ex ea commodo consequat.
+			</p>
+			</div>
+			
 		</section>
 	</main>
 </Layout>
