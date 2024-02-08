@@ -1,40 +1,49 @@
-
 ---
 import ExpStudiesItem from "./ExpStudiesItem.astro";
 
 const EXPERIENCESTUDIES = [
   {
-    title: 'Practicas AMIE Consulting',
-    date: 'February 2022',
-    description: 'Get access to over 20+ pages including a dashboard layout, charts, kanban board, calendar, and pre-order E-commerce & Marketing pages.',
-    link: '#'
+    title: "TFG AMIE Consulting",
+    date: "February 2022",
+    description:
+      "Get access to over 20+ pages including a dashboard layout, charts, kanban board, calendar, and pre-order E-commerce & Marketing pages.",
+    link: "#",
   },
   {
-    title: 'Uni',
-    date: 'February 2022',
-    description: 'Get access to over 20+ pages including a dashboard layout, charts, kanban board, calendar, and pre-order E-commerce & Marketing pages.',
-    link: '#'
+    title: "Practicas AMIE Consulting",
+    date: "February 2022",
+    description:
+      "Get access to over 20+ pages including a dashboard layout, charts, kanban board, calendar, and pre-order E-commerce & Marketing pages.",
+    link: "#",
   },
   {
-    title: 'Bachillerato Cientifico',
-    date: 'February 2022',
-    description: 'Get access to over 20+ pages including a dashboard layout, charts, kanban board, calendar, and pre-order E-commerce & Marketing pages.',
-    link: '#'
-  }
+    title: "Uni",
+    date: "February 2022",
+    description:
+      "Get access to over 20+ pages including a dashboard layout, charts, kanban board, calendar, and pre-order E-commerce & Marketing pages.",
+    link: "#",
+  },
+  {
+    title: "Bachillerato Cientifico",
+    date: "February 2022",
+    description:
+      "Get access to over 20+ pages including a dashboard layout, charts, kanban board, calendar, and pre-order E-commerce & Marketing pages.",
+    link: "#",
+  },
 ];
 ---
 
-
-
-<ul class="relative border-s border-gray-200 dark:border-gray-500 ml-2.5">   
-    {
-        EXPERIENCESTUDIES.map(({ title, date, description, link }) => 
-        <li class="mb-10 ms-4 ">
-            <ExpStudiesItem title={title} date={date} description={description} link={link} />
-        
-            </li>
-        )
-    }    
-    
+<ul class="relative border-s border-gray-200 dark:border-gray-500 ml-2.5">
+  {
+    EXPERIENCESTUDIES.map(({ title, date, description, link }) => (
+      <li class="mb-10 ms-4 ">
+        <ExpStudiesItem
+          title={title}
+          date={date}
+          description={description}
+          link={link}
+        />
+      </li>
+    ))
+  }
 </ul>
-
