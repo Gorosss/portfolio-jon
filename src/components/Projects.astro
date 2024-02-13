@@ -4,6 +4,7 @@
 import BootstrapIcon from './icons/BootstrapIcon.astro'
 import GithubIcon from './icons/GithubIcon.astro'
 import ReactIcon from './icons/ReactIcon.astro'
+import ViteIcon from './icons/ViteIcon.astro'
 import WebpageIcon from './icons/WebpageIcon.astro'
 
 const TAGS = {
@@ -16,6 +17,11 @@ const TAGS = {
             name: 'Bootstrap',
             color: 'bg-[#c2a0e8] text-black',
             icon: BootstrapIcon
+        },
+        VITE: {
+            name: 'Vite',
+            color: 'bg-white text-black',
+            icon: ViteIcon
         }
     }
 
@@ -29,12 +35,12 @@ const PROJECTS = [
         tags: [TAGS.REACT, TAGS.BOOTSTRAP]
     },
     {
-        title: 'Project 2',
-        description: 'This is a description of project 2',
-        image: 'https://via.placeholder.com/150',
-        link: 'https://www.google.com',
-        github: 'https://www.github.com',
-        tags: [TAGS.REACT, TAGS.BOOTSTRAP]
+        title: 'Online Store',
+        description: 'A simple e-commerce project to practice React using Vite.',
+        image: '/projects/onlineStoreImage.webp',
+        link: 'https://goros-online-store.vercel.app/',
+        github: 'https://github.com/Gorosss/online-store',
+        tags: [TAGS.REACT, TAGS.VITE]
     }
 ]
 ---
