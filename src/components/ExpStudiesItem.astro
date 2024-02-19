@@ -1,16 +1,14 @@
 <div
-  class="absolute w-3 h-3 bg-gray-200 rounded-full mt-1.5 -start-1.5 border border-white dark:border-gray-900 dark:bg-gray-700"
+  class="absolute w-3 h-3 rounded-full mt-1.5 -start-1.5 border border-gray-900 bg-gray-700"
 >
 </div>
-<time
-  class="mb-1 text-sm font-normal leading-none text-gray-300 dark:text-gray-400"
->
+<time class="mb-1 text-sm font-normal leading-none text-gray-400">
   {Astro.props.date}
 </time>
-<h3 class="text-lg font-semibold text-gray-900 dark:text-white">
+<h3 class="text-lg font-semibold text-white">
   {Astro.props.title}
 </h3>
-<p class="mb-4 text-base font-normal text-gray-400 dark:text-gray-300 text-pretty">
+<p class="mb-4 text-base font-normal text-gray-300 text-pretty">
   {Astro.props.description}
 </p>
 
@@ -18,7 +16,7 @@
   Astro.props.link && (
     <a
       href={Astro.props.link}
-      class="inline-flex items-center px-4 py-2 text-sm font-medium text-gray-900 bg-white border border-gray-200 rounded-lg hover:bg-gray-100 hover:text-blue-700 focus:z-10 focus:ring-4 focus:outline-none focus:ring-gray-200 focus:text-blue-700 dark:bg-gray-800 dark:text-gray-400 dark:border-gray-600 dark:hover:text-white dark:hover:bg-gray-700 dark:focus:ring-gray-700"
+      class="inline-flex items-center px-4 py-2 text-sm font-medium rounded-lg  focus:z-10 focus:ring-4 focus:outline-none  focus:text-blue-700 bg-gray-800 text-gray-400 border-gray-600 hover:text-white hover:bg-gray-700 focus:ring-gray-700"
     >
       Mas información
       <svg
