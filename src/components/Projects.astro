@@ -7,6 +7,11 @@ import ReactIcon from './icons/ReactIcon.astro'
 import ViteIcon from './icons/ViteIcon.astro'
 import WebpageIcon from './icons/WebpageIcon.astro'
 
+import { getI18n } from "../I18n";
+
+const { currentLocale } = Astro
+const i18n = getI18n({ currentLocale }) as { [key: string]: string };
+
 const TAGS = {
         REACT: {
             name: 'React',
@@ -27,16 +32,16 @@ const TAGS = {
 
 const PROJECTS = [
     {
-        title: 'SummonerData.gg',
-        description: 'Aplicación diseñada para proporcionar a los jugadores de League of Legends información valiosa y en tiempo real sobre los jugadores, permitiéndoles acceder fácilmente a datos clave relacionados con su historial de partidas, maestrías con los campeones y estadísticas en vivo.',
+        title: i18n.PRO_SUMM_TITLE,
+        description:  i18n.PRO_SUMM_DESC,
         image: '/projects/summonerDataImage.webp',
         link: 'https://summoner-data.vercel.app/',
         github: 'https://github.com/Gorosss/summonerData',
         tags: [TAGS.REACT, TAGS.BOOTSTRAP]
     },
     {
-        title: 'Online Store',
-        description: 'A simple e-commerce project to practice React using Vite.',
+        title:  i18n.PRO_ECO_TITLE,
+        description: i18n.PRO_ECO_DESC,
         image: '/projects/onlineStoreImage.webp',
         link: 'https://goros-online-store.vercel.app/',
         github: 'https://github.com/Gorosss/online-store',
@@ -68,11 +73,11 @@ const PROJECTS = [
                         </ul>
                     )
                 }
-                <p class="mb-4 text-base font-normal text-gray-400 dark:text-gray-300 text-pretty">{description}</p>
+                <p class="mb-4 text-base font-normal text-gray-300 text-pretty">{description}</p>
                
                 <div class="flex gap-3 my-3">
                     <a href={link} rel="noopener noreferrer" class="inline-flex items-center justify-center gap-2 px-3 py-2 space-x-2 text-base text-white transition bg-gray-800 border border-gray-600 focus-visible:ring-yellow-500/80 text-md hover:bg-gray-800 hover:border-gray-900 group max-w-fit rounded-xl hover:text-white focus:outline-none focus-visible:outline-none focus-visible:ring focus-visible:ring-white focus-visible:ring-offset-2 active:bg-black">
-                        <WebpageIcon />  Webpage</a>
+                        <WebpageIcon />  {i18n.PRO_WB_TAG}</a>
                 <a href={github} rel="noopener noreferrer" class="inline-flex items-center justify-center gap-2 px-3 py-2 space-x-2 text-base text-white transition bg-gray-800 border border-gray-600 focus-visible:ring-yellow-500/80 text-md hover:bg-gray-800 hover:border-gray-900 group max-w-fit rounded-xl hover:text-white focus:outline-none focus-visible:outline-none focus-visible:ring focus-visible:ring-white focus-visible:ring-offset-2 active:bg-black">
                      <GithubIcon />Github</a>
                 </div>

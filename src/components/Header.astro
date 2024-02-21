@@ -1,8 +1,30 @@
-<header class="rounded-full border border-white/35 bg-black/50 flex justify-center items-center mt-2 py-2 w-[740px]">
-   
-    <nav class="flex flex-row gap-x-10">     
-        <a href="#experienciaEstudios">Experiencia y estudios</a>
-        <a href="#proyectos">Proyectos</a>
-        <a href="#sobre_mi">Sobre mi</a>
+---
+import SpanishFlag from "./icons/Spanish.astro";
+import EnglishFlag from "./icons/English.astro";
+import { getI18n } from "../I18n";
+
+const { currentLocale } = Astro;
+const i18n = getI18n({ currentLocale }) as { [key: string]: string };
+---
+
+<header
+    class="rounded-full border border-white/35 bg-black/50 flex justify-center items-center mt-2 py-2 w-[740px]"
+>
+    <nav class="flex flex-row gap-x-10">
+        <a href="#experienciaEstudios">{i18n.EXPANDESTU_TITLE}</a>
+        <a href="#proyectos">{i18n.PRO_TITLE}</a>
+        <a href="#sobre_mi">{i18n.ABUOTME_TITLE}</a>
+
+        {
+            currentLocale === "es" ? (
+                <a href="/en">
+                    <EnglishFlag />
+                </a>
+            ) : (
+                <a href="/">
+                    <SpanishFlag />
+                </a>
+            )
+        }
     </nav>
 </header>

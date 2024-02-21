@@ -1,29 +1,33 @@
 ---
 import ExpStudiesItem from "./ExpStudiesItem.astro";
 
+
+import { getI18n } from "../I18n";
+
+const { currentLocale } = Astro
+const i18n = getI18n({ currentLocale }) as { [key: string]: string };
+
 const EXPERIENCESTUDIES = [
   {
-    title: "TFG AMIE Consulting",
-    date: "Diciembre 2022 - Julio 2023",
-    description:"Se desarrolló una página web que permite la programación visual de fabricación en cada etapa de proceso, teniendo en cuenta las restricciones de uso de recursos y la secuencia de fabricación. Además, se visualizan los recursos necesarios de personal, teniendo en cuenta o no las restricciones impuestas. Junto con la posibilidad de simulación o corrección manual del programa, con el recalculo de recursos.",
+    title: i18n.EXPANDESTU_TFG_TITLE,
+    date: i18n.EXPANDESTU_TFG_DATE,
+    description:i18n.EXPANDESTU_TFG_DESC,
     link: "https://github.com/Gorosss/TFG-Programacion_visual_de_la_produccion",
   },
   {
-    title: "Practicas AMIE Consulting",
-    date: "Mayo 2022 - Julio 2022",
-    description:
-      "Se llevaron a cabo prácticas como informático full-stack en la consultoría Amie Consulting. Durante este periodo, se emplearon los lenguajes JavaScript(JQuery), PHP y CSS, así como el framework CodeIgniter y diversas librerías, como Bootstrap, entre otras. Además, se adquirió experiencia en el manejo de bases de datos.",
+    title: i18n.EXPANDESTU_PRACTICES_TITLE,
+    date: i18n.EXPANDESTU_PRACTICES_DATE,
+    description:i18n.EXPANDESTU_PRACTICES_DESC,
   },
   {
-    title: "Ingenieria Informatica en la Universidad del Pais Vasco",
-    date: "Septiempre 2019 - Julio 2023",
-    description:
-      "Realicé mi grado en Ingeniería Informática en la UPV/EHU, donde adquirí conocimientos fundamentales en informática. Me especialicé en la rama de software, profundizando en los aspectos específicos que abarcan esta rama.",
+    title: i18n.EXPANDESTU_UNI_TITLE,
+    date: i18n.EXPANDESTU_UNI_DATE,
+    description:i18n.EXPANDESTU_UNI_DESC
   }
 ];
 ---
 
-<ul class="relative border-s border-gray-200 dark:border-gray-500 ml-2.5">
+<ul class="relative border-s border-gray-500 ml-2.5">
   {
     EXPERIENCESTUDIES.map(({ title, date, description, link }) => (
       <li class="mb-10 ms-4 ">
