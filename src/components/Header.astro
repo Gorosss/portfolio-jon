@@ -18,11 +18,11 @@ const i18n = getI18n({ currentLocale }) as { [key: string]: string };
 
         {
             currentLocale === "es" ? (
-                <a href="/en">
+                <a href="/en" aria-label="Change language to english">
                     <EnglishFlag />
                 </a>
             ) : (
-                <a href="/">
+                <a href="/" aria-label="Cambiar idioma al español">
                     <SpanishFlag />
                 </a>
             )
